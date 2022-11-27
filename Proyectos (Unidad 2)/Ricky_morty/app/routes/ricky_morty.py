@@ -30,4 +30,19 @@ def insertar():
     return "PERSONAJES INGRESADOS"
 
 
+def gravatar(id=""):
+    url = "https://rickandmortyapi.com/api/character/avatar/"
+    url=url + str(id) + ".jpeg"
+        
+    return "{url}".format(url=url)
+
+
+@personajes_ruta.route("/avatar/<id>")
+def avatar(id):
+    id=int(id)
+    filtro=db.personajes.find({"id":id})
+
+    avt = gravatar(id)
+    return render_template("avatar.html", avatar=avt, info=filtro)
+
 
