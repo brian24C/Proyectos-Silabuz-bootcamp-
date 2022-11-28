@@ -1,24 +1,33 @@
+
 <!DOCTYPE html>
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+<html>
 
-  <title>HTML5 con Flask</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PERSONAJES RICK AND MORTY</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/estilos.css" >
 
-<body>
-    
-    <img src="{{avatar}}" alt="">
-    
-    <br>
+    </head>
+    <body>
+         <div class="padre">
+                  <div class="tarjeta">
+                      <div class="titulo">{{info[0].name}}</div>
+                      <div class="cuerpo">
+                      <img src="{{info[0].image}}" alt="muestra">
+                      </div>
+                      <div class="pie">
+                          SPECIES: {{info[0].species}} <br> 
+                          GENDER: {{info[0].gender}} <br> 
+                          STATUS: {{info[0].status}} <br> 
+                      </div>
+                  </div>
+        </div>
 
-    Name: {{info[0].name}}  <br> 
-    {{info[0].species}} <br> 
-    {{info[0].gender}} <br> 
-    {{info[0].status}} <br> 
-
-
-</body>
+    </body>
 </html>
+
+

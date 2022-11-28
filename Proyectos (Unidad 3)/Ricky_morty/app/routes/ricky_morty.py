@@ -7,11 +7,13 @@ personajes_ruta=Blueprint("personajes_ruta", __name__)
 
 @personajes_ruta.route("/")
 def index():
-    personajes=db.personajes.find()
+    personajes=db.personajes.find().sort('id', -1)
     return render_template("index.html", personajes=personajes) 
 
 @personajes_ruta.route("/insertar")
 def insertar():
+
+    
 
     for n in range(1,22):
 
