@@ -1,6 +1,6 @@
 
-## LO QUE APRENDÍ:
-- Crear una estructura básica para una página web
+## LO QUE APRENDÍ CON FLASK:
+- Crear una estructura básica para una página web con FLASK
 - Conectarme a una BBDD NOSQL
 - Extraer información de la BBDD y mostrarlo en una pagina web
 - Usar querys para encontrar o insertar información  (por ejem: db.personajes.insert_one(infor.to_json()))
