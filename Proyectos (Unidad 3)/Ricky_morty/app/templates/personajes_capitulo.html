@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PERSONAJES RICK AND MORTY</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/static/estilos.css" >
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1 align="center">CAPITULO {{id}}</h1>
+        <div class="container">
+            <div class="row">
+
+                {% for i in informacion_url %}
+                
+                <div class="col-md-4">
+                    <div class="tarjeta">
+                        <div class="titulo">{{i.name}}</div>
+                        <div class="cuerpo">
+                        <img src="{{i.image}}" alt="muestra">
+                        </div>
+                      <div class="pie">
+                          TYPE: {{i.type}} <br> 
+                          SPECIES: {{i.species}} <br> 
+                          GENDER: {{i.gender}} <br> 
+                          STATUS: {{i.status}} <br> 
+                      </div>
+                    </div>
+                </div>
+            
+                {% endfor %}
+            </div>
+        </div>
+  
+    </body>
+</html>
