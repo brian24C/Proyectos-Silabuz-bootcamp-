@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     "crispy_forms",
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-4e9f.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-c8c1.up.railway.app']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
