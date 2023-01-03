@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+{% comment %} 
+<nav class="nav">
+  <a class="nav-link" href="{% url 'proyect:cerrar_sesion' %}" >LOG OUT</a>
+  <a class="nav-link disabled">FORMULARIO</a>
+</nav> {% endcomment %}
+
+
+<h1 align="center">FORMULARIO PROYECTO</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table style="color: black; margin: 20px auto;">{{form.as_table}}</table> 
+    <center><input type="submit" value="Crear proyecto" style="width: 150px;"></center>
+
+</form>
+
+
+  {% endblock %}

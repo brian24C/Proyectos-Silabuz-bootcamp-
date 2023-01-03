@@ -1,0 +1,57 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+<style>
+	table.table td a.edit {
+        color: #FFC107;
+    }
+    table.table td a.delete {
+        color: #F44336;
+    }
+    table.table td i {
+        font-size: 19px;
+    }
+</style>
+
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">TITULO PROYECTO</th>
+      <th scope="col">TAG</th>
+      <th scope="col">DESCRIPCION</th>
+      <th scope="col">URL</th>
+      <th scope="col">FOTO</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <form action="" method="POST">
+
+    {% for item in registros %}
+    <tr>
+      {% comment %} <input id="prodId" name="prodId" type="hidden" value="{{item.titulo}}"> {% endcomment %}
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.titulo}}</td>
+      <td>{{item.tag}}</td>
+      <td>{{item.descripcion}}</td>
+      <td>{{item.url}}</td>
+      <td><img src="{{ item.foto.url }}" alt="", height="100"></td>
+			<td>
+				<a href="{% url 'proyect:edit' item.id %}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+				<a href="{% url 'proyect:delete' item.id %}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+			</td>
+    </tr>
+    {% endfor %}
+
+    </form>
+  </tbody>
+</table>
+
+
+  {% endblock %}
